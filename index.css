@@ -1,36 +1,103 @@
-/* index.css */
+body {
+  background-color: #ffffff;
+  transition: background-color 0.3s ease;
+}
+
+body:hover {
+  background-color: #f9ffd4;
+}
+
 .container {
-    margin-top: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; 
-    align-items: center;
-    border-radius: 10px;
-  }
-  
+  max-width: 1200px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border: 1px solid #007bff;
+}
+
+.card-title {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.btn-primary {
+  background-color: #05ff3f;
+  color: #ffffff;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #05ff3f;
+}
+
+.modal-content {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3f9cff;
+  color: #fff;
+  padding: 15px;
+  border-radius: 10px 10px 0 0;
+}
+
+.modal-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+}
+
+.modal-body {
+  padding: 20px;
+  text-align: center;
+}
+
+.modal-body img {
+  width: 200px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #f2f2f2;
+  border-radius: 5px;
+}
+
+.modal-body p {
+  margin: 10px 0;
+  color: #555;
+  text-align: center;
+}
+
+.modal-footer {
+  background-color: #f8f8f8;
+  padding: 15px;
+  border-radius: 0 0 10px 10px;
+}
+
+@media (max-width: 768px) {
   .card {
-    margin: 10px;
-    padding: 10px;
-    text-align: center;
+    flex-basis: 40%;
   }
-  
-  .card-img-top {
-    width: 150px;
-    height: 150px;
-    object-fit: contain;
-  }
-  
-  .modal-content {
-    text-align: center;
-  }
-  
-  .modal-header {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .modal-footer {
-    display: flex;
-    justify-content: center;
-  }
-  
+}

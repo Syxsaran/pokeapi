@@ -86,6 +86,7 @@ const createModal = (pokemonData) => {
   
     const modalHeader = document.createElement("div");
     modalHeader.setAttribute("class", "modal-header");
+
     const headerTitle = document.createElement("h5");
     headerTitle.setAttribute("class", "modal-title");
     headerTitle.innerText = "รายละเอียดของ " + pokemonData.name.toUpperCase();
@@ -113,6 +114,12 @@ const createModal = (pokemonData) => {
     pokemonWeight.innerText = "น้ำหนัก : " + pokemonData.weight;
     modalBody.appendChild(pokemonWeight);
 
+    const pokemonAbilities = document.createElement("p");
+    pokemonAbilities.innerText = "พลัง : " + getPokemonAbilities(pokemonData);
+    pokemonAbilities.classList.add("pokemon-abilities");
+    modalBody.appendChild(pokemonAbilities);
+
+
     const modalFooter = document.createElement("div");
     modalFooter.setAttribute("class", "modal-footer");
     const closeButton = document.createElement("button");
@@ -131,5 +138,10 @@ const createModal = (pokemonData) => {
     modal.appendChild(modalDialog);
   
     return modal;
+  };
+
+  const getPokemonAbilities = (pokemonData) => {
+    const abilities = pokemonData.abilities.map((ability) => ability.ability.name);
+    return abilities.join(", ");
   };
   
